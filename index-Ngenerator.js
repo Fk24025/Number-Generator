@@ -15,15 +15,21 @@ myButton.onclick = function(){
     label1.textContent = randomNum1;
     label2.textContent = randomNum2;
     label3.textContent = randomNum3;
-}
+
 
 if(label1.textContent ===  label2.textContent &&
     label2.textContent ===  label3.textContent &&
-    label2.textContent ===  label2.textContent )
-
+    label3.textContent ===  label1.textContent )
     {
-        prompt("You got this; same numbers!")
+        positiveMsg()
+    }else{
+        negativeMsg()
     }
-    else{
-       prompt("Keep trying!")
+}
+
+    function positiveMsg(){
+        playNote.textContent="You won! You got same numbers!" 
+    }
+    function negativeMsg(){
+        playNote.textContent= "Keep trying! You need same numbers"
     }
